@@ -13,7 +13,7 @@ export function useMainContract() {
     recent_sender: Address;
     owner_address: Address;
   }>();
-  const [balance, setbalance] = useState<number | null>(0);
+  const [balance, setbalance] = useState<number | bigint>(0);
   const { sender } = useTonConnect();
   const sleep = (time: number) =>
     new Promise((resolve) => setTimeout(resolve, time));
